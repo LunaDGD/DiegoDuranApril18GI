@@ -28,7 +28,7 @@ if (userInput === 'whispering'){
 */
 //------------HARD
 
-const add =function(num1, num2){
+function add (num1, num2){
     return num1 + num2;
 }
 const subtract = function(num1, num2){
@@ -41,12 +41,19 @@ const divide = function(num1, num2){
     return num1 / num2;
 }
 
-//-------------VERY HARD
-const firstNum = prompt('Enter a number')
-const operation = prompt('Enter an operation(+,-,*,/)')
-const secNum = prompt('Enter another number')
 
-if (operation == '+') {
-    result = add(firstNum, secNum);
-    alert(`${num1} + ${num2} = ${result}`);
+
+//-------------VERY HARD
+const firstNum = Number(prompt('Enter a number'));
+const operation = prompt('Enter an operation(+,-,*,/)');
+const secondNum = Number(prompt('Enter another number'));
+
+if (operation === '+') {
+    alert(add(firstNum, secondNum));  
+} else if( operation === '-') {
+    alert(subtract(firstNum, secondNum));
+} else if( operation === '*') {
+    alert(multiply(firstNum, secondNum));
+} else if( operation === '/') {
+    alert(divide(firstNum, secondNum));
 }
